@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desi Roots Farm — Desi eggs from hens raised on open fields</title>
+<meta name="description" content="Desi Roots Farm keeps over 500 hens on open fields, fed a homemade mix of maize, wheat, chana and sarson. Farm eggs at Rs 450 a dozen, ordered on WhatsApp.">
+<meta name="theme-color" content="#16291D">
+<meta property="og:title" content="Desi Roots Farm — Desi eggs from hens raised on open fields">
+<meta property="og:description" content="Over 500 hens on open fields, fed our own maize, wheat, chana and sarson mix. Farm eggs Rs 450 a dozen. Order on WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#16291D; --field:#1F3A2B; --moss:#2E5540;
+  --sarson:#D8A12A; --wheat:#EADFBF; --paper:#FBF8F1;
+  --clay:#9A4A2A; --ink:#12201A; --muted:#5E6E63; --line:#DCD3BE;
+  --shadow:0 1px 2px rgba(22,41,29,.06),0 8px 24px rgba(22,41,29,.08);
+}
+:root:not([data-theme="light"]),:root[data-theme="dark"]{color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Karla',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Zilla Slab',Georgia,'Times New Roman',serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:700}
+h2{font-size:clamp(1.75rem,4.2vw,2.7rem);font-weight:600}
+h3{font-size:1.18rem;font-weight:600}
+p{margin:0 0 1rem}
+a{color:inherit}
+.wrap{width:min(1120px,92vw);margin-inline:auto}
+.narrow{max-width:62ch}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+:focus-visible{outline:3px solid var(--sarson);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--paper);padding:.6rem 1rem;border-radius:6px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(22,41,29,.97);
+  border-bottom:1px solid rgba(234,223,191,.16);backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--wheat)}
+.brand svg{flex:none}
+.brand b{font-family:'Zilla Slab',serif;font-size:1.12rem;font-weight:600;letter-spacing:.01em}
+.brand span{display:block;font-size:.66rem;color:rgba(234,223,191,.62);letter-spacing:.14em;font-weight:500}
+nav{display:none;gap:1.6rem}
+nav a{color:rgba(234,223,191,.82);text-decoration:none;font-size:.95rem;font-weight:500;padding-bottom:2px;border-bottom:1px solid transparent}
+nav a:hover{color:var(--paper);border-bottom-color:var(--sarson)}
+@media(min-width:900px){nav{display:flex}}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;
+  font-size:.95rem;padding:.72rem 1.15rem;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.btn-wa{background:var(--sarson);color:#2A1D05}
+.btn-wa:hover{background:#E8B23E}
+.btn-ghost{border-color:rgba(234,223,191,.4);color:var(--wheat)}
+.btn-ghost:hover{background:rgba(234,223,191,.1)}
+.btn-dark{background:var(--field);color:var(--wheat)}
+.btn-dark:hover{background:var(--moss)}
+.btn-lg{padding:.95rem 1.6rem;font-size:1.02rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--pine);color:var(--wheat);overflow:hidden;
+  padding:clamp(3rem,7vw,5.5rem) 0 0}
+.hero-grid{display:grid;gap:2.5rem;position:relative;z-index:2}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:3.5rem}}
+.hero h1{color:var(--paper)}
+.hero .lede{font-size:clamp(1.05rem,2.2vw,1.22rem);color:rgba(234,223,191,.86);max-width:46ch;margin-top:1.3rem}
+.urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:1.35rem;line-height:2.4;color:var(--sarson);
+  margin-bottom:.4rem;direction:rtl}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(234,223,191,.18);
+  border:1px solid rgba(234,223,191,.18);border-radius:10px;overflow:hidden;margin-top:2.6rem}
+.facts div{background:var(--pine);padding:1rem .85rem}
+.facts b{display:block;font-family:'Zilla Slab',serif;font-size:clamp(1.25rem,3.4vw,1.6rem);
+  color:var(--sarson);font-weight:600}
+.facts span{font-size:.78rem;color:rgba(234,223,191,.72);line-height:1.4;display:block}
+.scene{width:100%;height:auto;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+.hero-rule{margin-top:clamp(2.5rem,6vw,4rem);border-top:1px solid rgba(234,223,191,.16);
+  padding:1rem 0;font-size:.85rem;color:rgba(234,223,191,.62);text-align:center}
+
+/* ---------- prices ---------- */
+.price-grid{display:grid;gap:1.4rem;margin-top:2.6rem}
+@media(min-width:760px){.price-grid{grid-template-columns:minmax(0,26rem)}}
+.price{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.8rem;box-shadow:var(--shadow);
+  display:flex;flex-direction:column}
+.price .amt{font-family:'Zilla Slab',serif;font-size:2.5rem;font-weight:700;color:var(--field);line-height:1.1;margin:.6rem 0 .2rem}
+.price .amt small{font-size:.95rem;font-weight:500;color:var(--muted);font-family:'Karla',sans-serif}
+.price ul{list-style:none;padding:0;margin:1rem 0 1.6rem;font-size:.96rem;color:var(--muted)}
+.price li{padding-left:1.5rem;position:relative;margin-bottom:.45rem}
+.price li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--sarson)}
+.price .btn{margin-top:auto;align-self:flex-start}
+.note{margin-top:1.6rem;padding:1rem 1.2rem;border-left:3px solid var(--sarson);background:#fff;
+  border-radius:0 10px 10px 0;font-size:.95rem;color:var(--muted)}
+
+/* ---------- feed ---------- */
+.feed{background:var(--field);color:var(--wheat)}
+.feed h2{color:var(--paper)}
+.feed p{color:rgba(234,223,191,.85)}
+.ing{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(234,223,191,.2);
+  border:1px solid rgba(234,223,191,.2);border-radius:12px;overflow:hidden;margin-top:2.4rem}
+@media(min-width:720px){.ing{grid-template-columns:repeat(4,1fr)}}
+.ing article{background:var(--field);padding:1.5rem 1.2rem;text-align:center}
+.ing svg{margin:0 auto .8rem}
+.ing h3{color:var(--paper);font-size:1.05rem}
+.ing p{font-size:.86rem;margin:.3rem 0 0;color:rgba(234,223,191,.72)}
+
+/* ---------- life on the farm ---------- */
+.life{display:grid;gap:1.6rem;margin-top:2.6rem}
+@media(min-width:820px){.life{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.photo{aspect-ratio:4/3;border-bottom:1px solid var(--line);overflow:hidden}
+.photo svg{width:100%;height:100%;display:block}
+.card .body{padding:1.3rem}
+.card p{font-size:.95rem;color:var(--muted);margin:.5rem 0 0}
+
+/* ---------- steps ---------- */
+.steps{counter-reset:s;display:grid;gap:1.3rem;margin-top:2.6rem}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{position:relative;padding:1.6rem 1.4rem 1.4rem;background:#fff;border:1px solid var(--line);border-radius:14px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:1.4rem;
+  width:34px;height:34px;border-radius:50%;background:var(--sarson);color:#2A1D05;
+  font-family:'Zilla Slab',serif;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step h3{margin-top:.7rem}
+.step p{font-size:.95rem;color:var(--muted);margin:.4rem 0 0}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line);padding:1.15rem 0}
+details summary{cursor:pointer;font-weight:600;font-size:1.03rem;list-style:none;display:flex;
+  justify-content:space-between;align-items:center;gap:1rem}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:'Zilla Slab',serif;font-size:1.5rem;color:var(--sarson);line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:.8rem 0 0;color:var(--muted);font-size:.97rem;max-width:68ch}
+
+/* ---------- contact ---------- */
+.contact{background:var(--pine);color:var(--wheat)}
+.contact h2{color:var(--paper)}
+.contact-grid{display:grid;gap:2rem;margin-top:2.4rem}
+@media(min-width:820px){.contact-grid{grid-template-columns:1fr 1fr}}
+.cbox{border:1px solid rgba(234,223,191,.2);border-radius:12px;padding:1.6rem}
+.cbox a{color:var(--sarson);text-decoration:none;font-weight:600;font-size:1.15rem;word-break:break-word}
+.cbox a:hover{text-decoration:underline}
+.cbox p{color:rgba(234,223,191,.72);font-size:.9rem;margin:.35rem 0 0}
+footer{background:#101E15;color:rgba(234,223,191,.6);padding:2rem 0;font-size:.86rem}
+.fgrid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.fill{background:#FFF4D6;border:1px dashed #C9A94A;color:#6B5518;padding:.05rem .4rem;border-radius:4px;font-size:.95em}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="16" fill="#D8A12A"/>
+        <path d="M11 22c0-4 2.6-7 6-7 1 0 1.9.3 2.6.8l1.9-2.2.7 2.6 2.3.5-2 1.6c.3.8.5 1.7.5 2.7 0 .4 0 .7-.1 1H11Z" fill="#16291D"/>
+        <path d="M9 23h16" stroke="#16291D" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span style="line-height:1.15">
+        <b>Desi Roots Farm</b>
+        <span>PASTURE RAISED</span>
+      </span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#prices">Prices</a>
+      <a href="#feed">Our feed</a>
+      <a href="#farm">The farm</a>
+      <a href="#order">How to order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/923095697454?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20order%20from%20Desi%20Roots%20Farm." target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.6 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.2-1-.4-1.8-.7-3.1-1.3-5.1-4.5-5.3-4.7-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.2.1.4.2.4.3.1.1.1.6-.2 1.2Z"/></svg>
+      Order on WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="urdu">دیسی روٹ فارمز</div>
+      <h1>Eggs from hens that spend the day outdoors.</h1>
+      <p class="lede">Over 500 desi hens out on open fields from morning until dusk, foraging for insects and greens, fed once a day on a mix we grind ourselves. Collected daily and sent out fresh.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/923095697454?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20order%20from%20Desi%20Roots%20Farm." target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="#prices">See prices</a>
+      </div>
+      <div class="facts">
+        <div><b>500+</b><span>hens on the farm</span></div>
+        <div><b>All day</b><span>out on open fields</span></div>
+        <div><b>4</b><span>grains in our own feed</span></div>
+      </div>
+    </div>
+    <div>
+      <svg class="scene" viewBox="0 0 640 480" role="img" aria-label="Illustration of hens foraging in an open field at sunrise">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2C4736"/><stop offset="55%" stop-color="#6E7D48"/><stop offset="100%" stop-color="#C9A74A"/>
+          </linearGradient>
+          <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4E6B42"/><stop offset="100%" stop-color="#3B5636"/>
+          </linearGradient>
+          <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#37522F"/><stop offset="100%" stop-color="#22371F"/>
+          </linearGradient>
+        </defs>
+        <rect width="640" height="480" fill="url(#sky)"/>
+        <circle cx="470" cy="215" r="52" fill="#F0D07A" opacity=".9"/>
+        <path d="M0 250h640v40H0z" fill="#8C9A55" opacity=".55"/>
+        <path d="M0 262c60-16 120-16 180 0s120 16 180 0 120-16 180 0 100 10 100 10v40H0Z" fill="url(#far)"/>
+        <g fill="#C9A74A" opacity=".85">
+          <circle cx="40" cy="268" r="4"/><circle cx="96" cy="262" r="4"/><circle cx="152" cy="266" r="4"/>
+          <circle cx="214" cy="260" r="4"/><circle cx="276" cy="266" r="4"/><circle cx="338" cy="261" r="4"/>
+          <circle cx="400" cy="266" r="4"/><circle cx="462" cy="261" r="4"/><circle cx="524" cy="266" r="4"/><circle cx="586" cy="262" r="4"/>
+        </g>
+        <path d="M0 300c80-22 160-22 240 0s160 22 240 0 120-10 160-4v184H0Z" fill="url(#near)"/>
+        <g stroke="#2C4726" stroke-width="2" opacity=".5">
+          <path d="M0 340h640M0 380h640M0 424h640"/>
+        </g>
+        <!-- hens -->
+        <g>
+          <g transform="translate(120 352) scale(1.5)">
+            <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#3B2317"/>
+            <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/>
+            <circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+            <path d="M2 18h22" stroke="#1A1009" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(300 400) scale(1.9)">
+            <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#4A2E1C"/>
+            <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/>
+            <circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+            <path d="M2 18h22" stroke="#1A1009" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(470 356) scale(1.3)">
+            <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#33201A"/>
+            <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/>
+            <circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+            <path d="M2 18h22" stroke="#1A1009" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap"><p class="hero-rule">Farm eggs Rs 450 a dozen · Minimum order Rs 2,000 · Collected the same day</p></div>
+</div>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>What we sell</h2>
+      <p style="margin-top:1rem;color:var(--muted)">One product, one price. We tell you what is available that day before you pay for anything.</p>
+    </div>
+    <div class="price-grid">
+      <article class="price">
+        <h3>Farm eggs</h3>
+        <div class="amt">Rs 450<small> / dozen</small></div>
+        <ul>
+          <li>Collected daily from our own flock</li>
+          <li>Deep yellow yolks from foraging and natural feed</li>
+          <li>Sizes vary — these are real desi eggs, not graded</li>
+          <li>Packed carefully for delivery</li>
+        </ul>
+        <a class="btn btn-dark" href="https://wa.me/923095697454?text=I%20would%20like%20to%20order%20farm%20eggs%20from%20Desi%20Roots%20Farm.%20How%20many%20dozen%20are%20available%3F" target="_blank" rel="noopener">Order eggs</a>
+      </article>
+    </div>
+    <p class="note"><strong>Minimum order Rs 2,000</strong>, which works out at about five dozen. Many families order together and split the delivery.</p>
+  </div>
+</section>
+
+<section id="feed" class="feed">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>We make the feed ourselves</h2>
+      <p style="margin-top:1rem">Most poultry in Pakistan is raised on commercial feed built for fast weight gain. Ours is ground on the farm from four things, and the birds get it once a day. The rest of what they eat, they find themselves.</p>
+    </div>
+    <div class="ing">
+      <article>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#D8A12A" stroke-width="1.6" aria-hidden="true"><path d="M12 2c3 3 4 6 4 9s-1 6-4 11c-3-5-4-8-4-11s1-6 4-9Z"/><path d="M12 5v15"/></svg>
+        <h3>Maize</h3><p>The base of the mix</p>
+      </article>
+      <article>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#D8A12A" stroke-width="1.6" aria-hidden="true"><path d="M12 21V6"/><path d="M12 10c0-2 2-4 4-4 0 2-2 4-4 4Zm0 0c0-2-2-4-4-4 0 2 2 4 4 4Zm0 5c0-2 2-4 4-4 0 2-2 4-4 4Zm0 0c0-2-2-4-4-4 0 2 2 4 4 4Z"/></svg>
+        <h3>Wheat</h3><p>Grown and ground locally</p>
+      </article>
+      <article>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#D8A12A" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="10" r="4"/><circle cx="15" cy="15" r="4"/></svg>
+        <h3>Chana</h3><p>Protein without additives</p>
+      </article>
+      <article>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#D8A12A" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>
+        <h3>Sarson</h3><p>Mustard for condition and shine</p>
+      </article>
+    </div>
+    <p style="margin-top:2rem;max-width:62ch">No growth promoters and no commercial layer feed. If you want to see the mix before you order, ask us on WhatsApp and we will send a photo of that week's batch.</p>
+  </div>
+</section>
+
+<section id="farm">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>A day on the farm</h2>
+      <p style="margin-top:1rem;color:var(--muted)">The difference between our eggs and the ones in the shop is simply how the hens spend their time.</p>
+    </div>
+    <div class="life">
+      <article class="card">
+        <div class="photo">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Hens foraging on open grass at sunrise">
+            <defs>
+              <linearGradient id="f1s" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8FA5B8"/><stop offset="100%" stop-color="#E7D9A8"/></linearGradient>
+              <linearGradient id="f1g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6F8B4A"/><stop offset="100%" stop-color="#3E5A2C"/></linearGradient>
+            </defs>
+            <rect width="400" height="300" fill="url(#f1s)"/>
+            <circle cx="308" cy="78" r="30" fill="#F4DE93"/>
+            <path d="M0 132c50-12 92-12 142 0s96 10 146-2 78-6 112 2v50H0Z" fill="#7C8F55"/>
+            <path d="M0 156c60-16 120-8 180 4s140 10 220-8v148H0Z" fill="url(#f1g)"/>
+            <g stroke="#587239" stroke-width="2" opacity=".55"><path d="M0 200h400M0 238h400M0 276h400"/></g>
+            <g opacity=".45" fill="#9BB36A"><circle cx="46" cy="186" r="3"/><circle cx="128" cy="196" r="3"/><circle cx="222" cy="184" r="3"/><circle cx="316" cy="196" r="3"/><circle cx="374" cy="182" r="3"/></g>
+            <g transform="translate(70 196) scale(2.1)">
+              <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#4A2E1C"/>
+              <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/><circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+              <path d="M2 18h22" stroke="#1A1009" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(200 236) scale(2.6)">
+              <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#33201A"/>
+              <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/><circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+              <path d="M2 18h22" stroke="#1A1009" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(312 200) scale(1.8)">
+              <path d="M0 18c0-8 5-14 12-14 2.4 0 4.5.6 6.2 1.8L22 2l1.4 5.4 4.8 1-4.2 3.3c.6 1.8 1 3.8 1 6 0 .1 0 .2 0 .3H0Z" fill="#5A3A22"/>
+              <path d="M18.2 5.8 22 2l1.4 5.4 4.8 1-4.2 3.3" fill="#C0392B"/><circle cx="23" cy="8.5" r="1" fill="#FBF8F1"/>
+              <path d="M2 18h22" stroke="#1A1009" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Out at first light</h3>
+          <p>The hens are let out in the morning and stay on the fields all day, scratching for insects, seeds and greens.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="photo">
+          <svg viewBox="0 0 400 300" role="img" aria-label="A bowl of homemade grain feed with maize, wheat, chana and mustard seed">
+            <rect width="400" height="300" fill="#E9DDBC"/>
+            <rect y="210" width="400" height="90" fill="#C9AE7D"/>
+            <g opacity=".5" stroke="#B0946A" stroke-width="2"><path d="M0 232h400M0 258h400M0 284h400"/></g>
+            <ellipse cx="200" cy="236" rx="118" ry="20" fill="#0F1A12" opacity=".12"/>
+            <path d="M92 168h216c-6 44-44 72-108 72s-102-28-108-72Z" fill="#8A5A34"/>
+            <path d="M92 168h216c-2 14-8 26-17 36H109c-9-10-15-22-17-36Z" fill="#6F4527" opacity=".39"/>
+            <ellipse cx="200" cy="168" rx="108" ry="26" fill="#A56B3C"/>
+            <ellipse cx="200" cy="166" rx="96" ry="21" fill="#D8B26B"/>
+            <g>
+              <g fill="#E3B23C"><ellipse cx="164" cy="160" rx="8" ry="6"/><ellipse cx="196" cy="154" rx="8" ry="6"/><ellipse cx="228" cy="161" rx="8" ry="6"/><ellipse cx="180" cy="171" rx="8" ry="6"/><ellipse cx="214" cy="172" rx="8" ry="6"/></g>
+              <g fill="#C79A5E"><ellipse cx="148" cy="170" rx="7" ry="4" transform="rotate(-18 148 170)"/><ellipse cx="248" cy="167" rx="7" ry="4" transform="rotate(14 248 167)"/><ellipse cx="200" cy="176" rx="7" ry="4"/></g>
+              <g fill="#B98A4E"><circle cx="136" cy="162" r="6"/><circle cx="262" cy="158" r="6"/><circle cx="170" cy="150" r="6"/></g>
+              <g fill="#6E5A24"><circle cx="210" cy="149" r="3"/><circle cx="238" cy="152" r="3"/><circle cx="152" cy="156" r="3"/><circle cx="186" cy="163" r="3"/></g>
+            </g>
+            <g fill="#C79A5E"><ellipse cx="96" cy="250" rx="7" ry="4" transform="rotate(-20 96 250)"/><ellipse cx="128" cy="264" rx="7" ry="4" transform="rotate(10 128 264)"/><ellipse cx="292" cy="254" rx="7" ry="4" transform="rotate(22 292 254)"/></g>
+            <g fill="#E3B23C"><ellipse cx="112" cy="272" rx="8" ry="6"/><ellipse cx="276" cy="270" rx="8" ry="6"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>One feed a day</h3>
+          <p>They are fed our own maize, wheat, chana and sarson mix once daily. Everything else they eat, they forage.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="photo">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Freshly collected brown eggs in a basket">
+            <rect width="400" height="300" fill="#EFE6CE"/>
+            <rect y="216" width="400" height="84" fill="#D8C59A"/>
+            <ellipse cx="200" cy="244" rx="132" ry="22" fill="#0F1A12" opacity=".12"/>
+            <path d="M74 150h252l-20 92H94Z" fill="#B07C42"/>
+            <g stroke="#8E5F2E" stroke-width="3" opacity=".65">
+              <path d="M80 176h240M86 202h228M92 226h216"/>
+              <path d="M120 150l-8 92M180 150l-4 92M240 150l4 92M300 150l8 92"/>
+            </g>
+            <ellipse cx="200" cy="150" rx="126" ry="24" fill="#C68B4C"/>
+            <g>
+              <ellipse cx="146" cy="140" rx="24" ry="30" fill="#C98B50"/>
+              <ellipse cx="140" cy="132" rx="9" ry="12" fill="#E3B47C" opacity=".6"/>
+              <ellipse cx="200" cy="132" rx="25" ry="31" fill="#D89A5C"/>
+              <ellipse cx="194" cy="124" rx="9" ry="12" fill="#F0C892" opacity=".6"/>
+              <ellipse cx="254" cy="140" rx="24" ry="30" fill="#BE7F45"/>
+              <ellipse cx="248" cy="132" rx="9" ry="12" fill="#DDAA72" opacity=".6"/>
+              <ellipse cx="172" cy="162" rx="23" ry="29" fill="#E0A467"/>
+              <ellipse cx="228" cy="162" rx="23" ry="29" fill="#CE9254"/>
+            </g>
+            <g>
+              <ellipse cx="66" cy="244" rx="22" ry="27" fill="#D89A5C"/>
+              <ellipse cx="61" cy="236" rx="8" ry="11" fill="#F0C892" opacity=".55"/>
+              <ellipse cx="336" cy="248" rx="21" ry="26" fill="#C98B50"/>
+              <ellipse cx="331" cy="240" rx="8" ry="11" fill="#E8BB83" opacity=".55"/>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Collected and packed daily</h3>
+          <p>Eggs are gathered each day and packed as orders come in, so what reaches you is usually a day or two old at most.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="order" style="background:#F3EEE1">
+  <div class="wrap">
+    <div class="narrow"><h2>How to order</h2></div>
+    <div class="steps">
+      <article class="step">
+        <h3>Message us on WhatsApp</h3>
+        <p>Tell us how many dozen you want and which area you are in.</p>
+      </article>
+      <article class="step">
+        <h3>We confirm weight and total</h3>
+        <p>We reply with how many dozen we can send that day and the total against the Rs 2,000 minimum.</p>
+      </article>
+      <article class="step">
+        <h3>Collect or have it delivered</h3>
+        <p>We agree a day and time with you, then send the order fresh on that day.</p>
+      </article>
+    </div>
+    <p style="margin-top:2.2rem">
+      <a class="btn btn-wa btn-lg" href="https://wa.me/923095697454?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20place%20an%20order.%20Eggs%3A%20___%20dozen.%20Area%3A%20___" target="_blank" rel="noopener">Start your order on WhatsApp</a>
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2>Questions people ask</h2>
+    <div style="margin-top:1.6rem">
+      <details open>
+        <summary>How are these different from shop eggs?</summary>
+        <p>Most eggs sold in shops come from hens kept indoors on commercial feed. Ours come from hens that are outside all day finding much of their own food, which is why the yolks are darker and firmer.</p>
+      </details>
+      <details>
+        <summary>Do you use growth promoters or antibiotics in the feed?</summary>
+        <p>Our feed is ground on the farm from maize, wheat, chana and sarson. Nothing else is added to it.</p>
+      </details>
+      <details>
+        <summary>What if some eggs break in transit?</summary>
+        <p>Tell us on WhatsApp with a photo on the day you receive them and we will replace them in your next delivery.</p>
+      </details>
+      <details>
+        <summary>Where do you deliver?</summary>
+        <p>We deliver around <span class="fill">add your city and the areas you cover</span>. If you are outside that area, message us and we will tell you whether we can reach you.</p>
+      </details>
+      <details>
+        <summary>How fresh are the eggs?</summary>
+        <p>They are collected daily from the same flock and sent out as orders come in, so they are usually a day or two old at most.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Talk to us</h2>
+      <p style="margin-top:1rem;color:rgba(234,223,191,.85)">We answer WhatsApp messages ourselves. Ask anything about the hens, the feed or delivery before you order.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <h3 style="color:var(--paper);margin-bottom:.6rem">WhatsApp &amp; phone</h3>
+        <a href="https://wa.me/923095697454" target="_blank" rel="noopener">0309 5697454</a>
+        <p>Same number for calls and WhatsApp</p>
+      </div>
+      <div class="cbox">
+        <h3 style="color:var(--paper);margin-bottom:.6rem">Email</h3>
+        <a href="mailto:razaghumman113@gmail.com">razaghumman113@gmail.com</a>
+        <p>For larger or regular orders</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;color:rgba(234,223,191,.7);font-size:.95rem">
+      Farm location: <span class="fill">add your city or district here</span>
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <span>© <span id="yr">2026</span> Desi Roots Farm — desi eggs from hens raised on open fields.</span>
+    <span><a href="https://wa.me/923095697454" style="color:var(--sarson);text-decoration:none">0309 5697454</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+<!--
+  ANALYTICS: paste your Google Analytics or Plausible snippet immediately above </body>
+  when the site is hosted on GitHub Pages. Analytics scripts do not run in preview environments.
+-->
+</body>
+</html>
